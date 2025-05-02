@@ -15,9 +15,11 @@ public class EmployeeClient {
 		
 		//Will not work! This is where the adapter comes into play!
 		
-		//Employee employeeFromLdap = new EmployeeLdap("chewie", "Solo", "Han", "han@solo.com");
+//		Employee employeeFromLdap = new EmployeeLdap("chewie", "Solo", "Han", "han@solo.com");
 
 		EmployeeLdap employeeFromLdap = new EmployeeLdap("chewie", "Solo", "Han", "han@solo.com");
+
+		employees.add(new EmployeeAdapterLdap(employeeFromLdap));
 
 		return employees;
 		
