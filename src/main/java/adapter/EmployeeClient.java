@@ -21,6 +21,10 @@ public class EmployeeClient {
 
 		employees.add(new EmployeeAdapterLdap(employeeFromLdap));
 
+		EmployeeCSV employeeCSV = new EmployeeCSV("567,Sherlock,Holmes,sherlock@holmes.com");
+
+		employees.add(new EmployeeAdapterCSV(employeeCSV));
+
 		return employees;
 		
 	}
